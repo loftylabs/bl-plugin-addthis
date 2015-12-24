@@ -2,8 +2,9 @@
 
 {% block extra_js %}
     {{ block.super }}
-    <script>
-        alert("it works");
-    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    {% if request.plugin_settings.bl_plugin_addthis.profile_id  %}
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ request.plugin_settings.bl_plugin_addthis.profile_id }}" async="async"></script>
+    {% endif %}
 {% endblock %}
 
