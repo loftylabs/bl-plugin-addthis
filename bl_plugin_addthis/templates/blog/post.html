@@ -1,0 +1,9 @@
+{% overextends "blog/post.html" %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script>
+        alert("it works");
+    </script>
+{% endblock %}
+
